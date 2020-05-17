@@ -22,7 +22,6 @@
     }
 
     updateLastWatched(series) {
-      console.log(seriesDb.select({ id: series.id }).get())
       seriesDb.select({ id: series.id }).update({ lastWatched: series.lastWatched })
     }
 
