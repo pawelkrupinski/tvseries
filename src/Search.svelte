@@ -6,12 +6,14 @@
 	let search = ''
   let results = []
 
-  $: {
-    fetch('http://api.tvmaze.com/search/shows?q=' + search)
+  $: if (search) {
+    fetch('https://api.tvmaze.com/search/shows?q=' + search)
       .then(response => response.json())
       .then(json => {
         results = json.map(series => series.show)
       }, alert)
+  } else {
+    results = []
   }
 
   function imgUrl(series) {
@@ -31,7 +33,7 @@
   }
 
   function fetchEpisodes(id, callback) {
-    return fetch(`http://api.tvmaze.com/shows/${id}/episodes`)
+    return fetch(`https://api.tvmaze.com/shows/${id}/episodes`)
       .then(response => response.json())
   }
 </script>
