@@ -3,6 +3,7 @@
 
   const service = new SeriesService()
 
+  export let added = () => {}
 	let search = ''
   let results = []
 
@@ -27,6 +28,7 @@
       const episodes = await fetchEpisodes(series.id)
       series.episodes = episodes
       service.add(series)
+      added()
     }
     search = ''
     results = []

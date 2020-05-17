@@ -5,7 +5,13 @@
 
   const seriesService = new SeriesService()
   
-  let allSeries = seriesService.findAll().sort((a, b) => a.name.localeCompare(b.name))
+  let allSeries = []
+
+  refreshSeries()
+
+  function refreshSeries() {
+    allSeries = seriesService.findAll().sort((a, b) => a.name.localeCompare(b.name))
+  }
 </script>
 
 <style>
@@ -13,7 +19,7 @@
 </style>
 
 <div class="ui container">
-  <Search />
+  <Search added={refreshSeries}/>
   <table class="ui celled striped table">
   <tbody>
     {#each allSeries as series}
