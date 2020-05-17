@@ -1,0 +1,40 @@
+{
+  "name": "svelte-app",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public -s --port 5555",
+    "test": "jest test",
+    "test:watch": "npm run test -- --watch"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-transform-modules-commonjs": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^7.0.0",
+    "@testing-library/jest-dom": "^5.7.0",
+    "@testing-library/svelte": "^3.0.0",
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1",
+    "jest-transform-svelte": "^2.1.1",
+    "localStorage": "^1.0.4",
+    "rollup": "^2.0.0",
+    "rollup-plugin-livereload": "^1.0.0",
+    "rollup-plugin-svelte": "^5.0.3",
+    "rollup-plugin-terser": "^5.1.2",
+    "svelte": "^3.0.0",
+    "svelte-jester": "^1.0.5",
+    "svelte-preprocess": "^3.7.4",
+    "svelte-router-spa": "^5.6.0"
+  },
+  "dependencies": {
+    "fomantic-ui": "^2.8.4",
+    "gulp": "^4.0.2",
+    "lodash": "^4.17.15",
+    "sirv-cli": "^0.4.5",
+    "@pawelkrupinski/mini-db": "0.1.0"
+  }
+}
